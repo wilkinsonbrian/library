@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #fef2f2;
+}
+.books {
+    display: grid;
+    grid-template-columns: repeat(3, 300px);
+    gap: 20px;
+}
+
+.card {
+    border: 1px solid #991b1b;
+    background-color: white;
+    border-radius: 15px;
+    display: grid;
+    grid-row: repeat(5 1fr);
+    height: 300px;
+}
+
+.bk-card {
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+    align-items: center;
+}
+
+.bk-label {
+    text-align: right;
+}
+
+.bk-card>button {
+    border: none;
+    text-align: center;
+    font-size: 12px;
+    background-color: #f87171;
+    color: white;
+    height: 30px;
+    width: 75px;
+    border-radius: 10px;
+}
