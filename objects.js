@@ -44,6 +44,16 @@ function removeBook() {
     displayBooks();
 }
 
+function showForm() {
+    const bookForm = document.getElementById('addBook');
+    bookForm.classList.remove("hidden");
+}
+
+function hideForm() {
+    const bookForm = document.getElementById('addBook');
+    bookForm.classList.add("hidden");
+}
+
 function displayBooks() {
     removeBookCards(); // Clear all the cards so that the data can be refreshed
     const booksDiv = document.querySelector('.books');
@@ -126,12 +136,13 @@ function displayBooks() {
             cardDiv.appendChild(bkButtons);
 
             booksDiv.appendChild(cardDiv);
-            body.insertBefore(booksDiv, form);
+            //body.insertBefore(booksDiv, form);
         }
     });
 }
 
 function addBookToLibrary() {
+    hideForm();
     const form = document.getElementById('addBook');
     let title = form.elements['title'].value;
     let author = form.elements['author'].value;
@@ -142,6 +153,8 @@ function addBookToLibrary() {
     currentID++;
 }
 
+const newBookBtn = document.querySelector('.new-book');
+newBookBtn.addEventListener('click', showForm);
 const myBookOne = new Book("Harry Potter", "J.K. Rowling", 780, true, 0);
 const myBookTwo = new Book("Slaughterhouse 5", "Kurt Vonnegut", 355, false, 1);
 myLibrary.push(myBookOne);

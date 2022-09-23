@@ -3,6 +3,9 @@
 body {
     font-family: 'Roboto', sans-serif;
     background-color: #fef2f2;
+    display: grid;
+    grid-template-rows: 1fr 25px 1fr;
+    gap: 20px;
 }
 .books {
     display: grid;
@@ -31,7 +34,7 @@ body {
     text-align: right;
 }
 
-.bk-card>button {
+button {
     border: none;
     text-align: center;
     font-size: 12px;
@@ -40,4 +43,22 @@ body {
     height: 30px;
     width: 75px;
     border-radius: 10px;
+}
+
+.booktitle, .bookauthor, .bookpages {
+    display: grid;
+    grid-template-rows: 25px 25px;
+}
+
+.book-info {
+    width: 250px;
+}
+
+form {
+    width: 500px;
+    display: grid;
+}
+
+.hidden {
+    display: none;
 }
